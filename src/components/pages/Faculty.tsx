@@ -107,7 +107,7 @@ const Faculty = () => {
                 {faculty.name
                   .split(" ")
                   .filter((n) => n.length > 0)
-                  .filter((n, i, arr) => i === 0 || i === arr.length - 1)
+                  .filter((_n, i, arr) => i === 0 || i === arr.length - 1)
                   .map((n) => n[0])
                   .join("")}
               </div>
