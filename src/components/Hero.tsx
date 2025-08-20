@@ -4,19 +4,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/bu_pic.jpg",
+    image: "https://i.postimg.cc/fRwVvtLQ/bu-pic.jpg",
     title: "Share your commencement memories!",
-    subtitle: "Share your photos from commencement with us, and help celebrate the experience!",
+    subtitle:
+      "Share your photos from commencement with us, and help celebrate the experience!",
     button: "Submit your photos here",
   },
   {
-    image: "/Barishal_University (1).jpg",
+    image: "https://i.postimg.cc/05Y5Hkhk/bu2-pic.jpg",
     title: "Welcome to University of Barishal",
     subtitle: "Shaping the future through innovation and knowledge",
     button: "Explore More",
   },
   {
-    image: "/bu2_pic.jpg",
+    image: "https://i.postimg.cc/XJM3Qm8B/Barishal-University-1.jpg",
     title: "Research & Innovation",
     subtitle: "Driving impactful solutions through cutting-edge research",
     button: "Learn More",
@@ -35,7 +36,8 @@ const Hero = () => {
   }, []);
 
   const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () =>
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <section className="relative w-full h-[80vh] overflow-hidden bg-black">
@@ -54,7 +56,9 @@ const Hero = () => {
 
       {/* Overlay content */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-blue-900/80 text-white p-6 rounded-lg max-w-3xl text-center shadow-lg z-20">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">{slides[index].title}</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+          {slides[index].title}
+        </h2>
         <p className="mb-4">{slides[index].subtitle}</p>
         <button className="bg-white text-blue-700 font-semibold px-4 py-2 rounded hover:bg-gray-200 transition">
           {slides[index].button}
@@ -62,7 +66,7 @@ const Hero = () => {
       </div>
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* <div className="absolute inset-0 bg-black/40"></div> */}
 
       {/* Left arrow */}
       <button
